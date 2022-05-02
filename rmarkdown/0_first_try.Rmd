@@ -1,0 +1,71 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# This is my first try
+I'm trying to learn rmarkdown 
+## Inline r code
+Two plus two
+equals `r 2 + 2`.
+
+## R code chunck
+```{r}
+2+2
+```
+
+this code wont be run
+```{r eval=FALSE}
+2+2
+```
+
+this code will be run but only the result will be show
+```{r echo=FALSE}
+2+2
+```
+
+bash code:
+```{bash}
+echo "helloword"
+```
+python code:
+```{python}
+for i in range(1,10):
+  print(i)
+
+```
+adding pwsh as language to knitr:
+```{r include=FALSE}
+knitr::knit_engines$set(pwsh = function(options) {
+ code <- paste(options$code, collapse = '\n')
+  out  <- system2(
+    'pwsh', c('-c', shQuote(code)), stdout = TRUE
+  )
+  knitr::engine_output(options, code, out)
+} )
+
+```
+powershell code:
+```{pwsh echo=TRUE, engine.path="/usr/bin/pwsh", engine.opts='-l'}
+Write-Host "Helloword pwsh"
+Write-Host $env:USER
+```
+Common markdown code:
+```
+printf(hello word)
+```
+```bash
+echo 'hello word'
+```
+
+```groovy
+process FOO{
+
+  script:
+  """
+  echo 'foo'
+  """
+}
+```
+

@@ -31,3 +31,9 @@ switch_name "davi"
 $function_return = switch_name "eduardo"
 
 Write-host "function return: "$function_return 
+
+#powershell even has lambdas:
+$y= (2*3*5*(switch_name "lambda").length)
+Write-host $y
+
+

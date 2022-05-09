@@ -1,7 +1,11 @@
-$URL = 'https://globoplay.globo.com/v/10555622/'
+$URL = 'https://globoplay.globo.com/v/10555775/'
 $html = Invoke-RestMethod $URL
 if ($html -match 'Exibição em.*-->(?<date>.*)\</span')
 {
-$data = $Matches.date
+$date = $Matches.date
 }
-write-host $data
+if ($html -match 'playkit-video-info__ep-title\">(?<title>.*)<\/h1'){
+$title = $Matches.title
+}
+write-host $date
+write-host $title

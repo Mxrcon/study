@@ -9,4 +9,4 @@ switch ($speed){
 	fast {"$(start-sleep 5s)"}
 
 }
-# python doens't have switch case lol
+# python doesn't have switch case lol

@@ -43,18 +43,33 @@ e por ter o valor igual a 0, satisfaz a equação de laplace.
 
 # Questão 2:
 
-A partir da euqação da onda:
+A partir da equção da onda:
 
 <img src= "https://render.githubusercontent.com/render/math?math=\frac{\partial^2u}{\partial t^2}= c^2\frac{\partial^2u}{\partial x^2}">
 
 E Utilizando a seguinte equação:
 
-<img src= "https://render.githubusercontent.com/render/math?math=\sin(c\omega t) \sin(\omega t)">
+<img src= "https://render.githubusercontent.com/render/math?math=\sin(c\omega t) \sin(\omega x)">
 
+Calcularemos as derivadas parciais de segunda ordem:
 
+Primeira derivada parcial para t:
 
+<img src= "https://render.githubusercontent.com/render/math?math=\sin %28\omega x%29\cos %28c\omega t%29c\omega">
 
-Bastando calcular as derivadas parciais duplas para x e y, e devolve-las para a equação da onda.
+Segunda derivada parcial para t:
+
+<img src= "https://render.githubusercontent.com/render/math?math=-c^2\omega ^2\sin %28\omega x%29\sin %28c\omega t%29">
+
+Primeira derivada parcial para x:
+
+<img src= "https://render.githubusercontent.com/render/math?math=%28\sin %28c\omega t%29\cos %28\omega x%29\omega %29">
+
+Segunda derivada parcial para x:
+
+<img src= "https://render.githubusercontent.com/render/math?math=-\omega ^2\sin %28\omega x%29\sin %28c\omega t%29">
+
+Podemos observar que multiplicando a segunda derivada parcial para x por c², obteremos a segunda derivada parcial para t. Obedecendo a equação da onda.
 
 # Questão 3:
 
@@ -63,25 +78,33 @@ A função que define a resistência é: <img src= "https://render.githubusercon
 Primeiro calcularemos as derivadas duplas para R1 e R2 e determinaremos o produto.
 
 Primeira derivada para R1:
-\left(\frac{B^2}{\left(A+B\right)^2}\right)
+
+<img src= "https://render.githubusercontent.com/render/math?math=%28\frac{R_2^2}{%28R_1R_ %2B 2%29^2}%29">
 
 Segunda derivada para R1:
--\frac{2B^2}{\left(A+B\right)^3}
 
-Primeira derivada para R2
-\frac{A^2}{\left(A+B\right)^2}
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{2R_2^2}{%28R_1 %2B R_2%29^3}">
 
-Segunda derivada para R2
--\frac{2A^2}{\left(A+B\right)^3}
+Primeira derivada para R2:
+
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{R_1^2}{%28R_1 %2B R_2%29^2}">
+
+Segunda derivada para R2:
+
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{2R_1^2}{%28R_1 %2B R_2%29^3}">
 
 Calculando o produto das Derivadas parciais de segunda ordem:
 
--\frac{2B^2}{\left(A+B\right)^3}* -\frac{2A^2}{\left(A+B\right)^3}
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{2R_2^2}{%28R_1 %2B R_2%29^3}* \frac{2R_1^2}{%28R_1 %2B R_2%29^3}">
 
-\frac{4B^2A^2}{\left(A+B\right)^6}
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{4R_2^2R_1^2}{%28R_1 %2B R_2%29^6}">
 
-Calculando \frac{4\cdot \left(\frac{R)^2}{\:\left(A+B\right)^4}
+Substituindo R na formula apresentada:
 
-\frac{4A^2B^2}{\left(A+B\right)^6}
+<img src= "https://render.githubusercontent.com/render/math?math=%5Cfrac%7B4(%7B%5Cfrac%7BR_1R_2%7D%7BR_1%20R_2%7D)%7D%5E2%7D%7B%7B%28R_1%2B%20R_2%29%7D%5E4%7D">
+
+Obtermos:
+
+<img src= "https://render.githubusercontent.com/render/math?math=\frac{4R_2^2R_1^2}{%28R_1 %2B R_2%29^6}">
 
 O produto das derivadas parciais de segunda ordem é igual equação obtida ao substituirmos o valor de R na equação proposta.
